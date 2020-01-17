@@ -2,7 +2,6 @@
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +51,7 @@ li a:hover:not (.active ) {
 				<th>First Name</th>
 				<th>Last Name</th>
 				<th>Email</th>
+				<th>Department Name</th>
 				<th>Edit</th>
 				<th>Delete</th>
 			</tr>
@@ -61,6 +61,7 @@ li a:hover:not (.active ) {
 					<td><c:out value="${employee.firstName}"></c:out></td>
 					<td><c:out value="${employee.lastName}"></c:out></td>
 					<td><c:out value="${employee.email}"></c:out></td>
+					<td><c:out value="${employee.department.name}"></c:out></td>
 					<td><a href="editEmployee?employeeId=${employee.id}">edit</a></td>
 					<td><a href="deleteEmployee?employeeId=${employee.id}">delete</a></td>
 				</tr>

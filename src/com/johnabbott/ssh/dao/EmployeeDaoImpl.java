@@ -18,6 +18,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	@Override
 	public int addEmployee(Employee employee) {
 		sessionFactory.getCurrentSession().save(employee);
+		sessionFactory.getCurrentSession().save(employee.getDepartment());
 		return 1;
 	}
 
@@ -39,8 +40,9 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public boolean editEmployee(Employee employee) {
+	public boolean editEmployee(Employee employee) {		
 		getSession().update(employee);
+		getSession().update(employee.getDepartment());
 		return true;
 	}
 

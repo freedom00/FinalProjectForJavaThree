@@ -63,6 +63,11 @@ li a:hover:not (.active ) {
 					<td>Email</td>
 					<td><form:input path="email" /></td>
 				</tr>
+				
+				<tr>
+					<td>Department Name</td>
+					<td><form:input path="department.name" /></td>
+				</tr>
 
 				<tr>
 					<td colspan="2"><input type="submit" value="Save Employee"></td>

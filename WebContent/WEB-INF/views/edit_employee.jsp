@@ -48,7 +48,7 @@ li a:hover:not (.active ) {
 		<form:form action="updateEmployee" method="post" 
 			modelAttribute="editedemployee">
 			<table>
-					<form:hidden path="id" />
+				<form:hidden path="id" />
 				
 				<tr>
 					<td>First Name</td>
@@ -63,6 +63,13 @@ li a:hover:not (.active ) {
 				<tr>
 					<td>Email</td>
 					<td><form:input path="email" /></td>
+				</tr>
+
+				<form:hidden path="department.id"/>
+
+				<tr>
+					<td>Department Name</td>
+					<td><form:input path="department.name" /></td>
 				</tr>
 
 				<tr>
