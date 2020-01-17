@@ -40,7 +40,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public boolean editEmployee(Employee employee) {
+	public boolean editEmployee(Employee employee) {		
 		getSession().update(employee);
 		getSession().update(employee.getDepartment());
 		return true;
